@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1764857736812,
     "description" : "",
@@ -7,5 +8,123 @@
     "name" : "Test Flow",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "ATTR1",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bb5e6956-5ca5-3195-85db-a903c9f2a9ae",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "AttributesToCSV",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 528.0,
+        "y" : 121.19999694824219
+      },
+      "properties" : {
+        "null-value" : "false",
+        "include-core-attributes" : "true",
+        "destination" : "flowfile-attribute",
+        "include-schema" : "false"
+      },
+      "propertyDescriptors" : {
+        "null-value" : {
+          "displayName" : "Null Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "null-value",
+          "sensitive" : false
+        },
+        "include-core-attributes" : {
+          "displayName" : "Include Core Attributes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "include-core-attributes",
+          "sensitive" : false
+        },
+        "attributes-regex" : {
+          "displayName" : "Attributes Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attributes-regex",
+          "sensitive" : false
+        },
+        "destination" : {
+          "displayName" : "Destination",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "destination",
+          "sensitive" : false
+        },
+        "include-schema" : {
+          "displayName" : "Include Schema",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "include-schema",
+          "sensitive" : false
+        },
+        "attribute-list" : {
+          "displayName" : "Attribute List",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-list",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "d22b65e1-da80-4d4c-80b4-ef49e419d34a",
+    "flowIdentifier" : "Test-Flow",
+    "timestamp" : 1764857738079
+  }
 }
